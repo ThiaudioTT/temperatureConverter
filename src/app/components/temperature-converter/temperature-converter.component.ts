@@ -20,18 +20,29 @@ export class TemperatureConverterComponent {
 
 
   celsiusToAll() {
+    this.celsius = Number(this.celsius);
     this.kelvin = Number(this.celsius) + 273.15;
     this.fahrenheit = (Number(this.celsius) * 9 / 5) + 32;
+    this.fixDecimals();
   }
 
   fahrenheitToAll() {
+    this.fahrenheit = Number(this.fahrenheit);
     this.celsius = (Number(this.fahrenheit) - 32) * 5 / 9;
     this.kelvin = Number(this.celsius) + 273.15;
+    this.fixDecimals();
   }
 
   kelvinToAll() {
+    this.kelvin = Number(this.kelvin);
     this.celsius = Number(this.kelvin) - 273.15;
     this.fahrenheit = (Number(this.celsius) * 9 / 5) + 32;
+    this.fixDecimals();
   }
 
+  fixDecimals() {
+    this.celsius = Number(this.celsius.toFixed(2));
+    this.fahrenheit = Number(this.fahrenheit.toFixed(2));
+    this.kelvin = Number(this.kelvin.toFixed(2));
+  }
 }

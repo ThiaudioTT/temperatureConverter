@@ -6,9 +6,9 @@
   <input type="text" min="-273.15" [(ngModel)]="celsius" (ngModelChange)="celsiusToAll()" appDecimalLimit> C
 </label>
 <label for="kelvin">
-  <input type="text" [(ngModel)]="kelvin" (ngModelChange)="kelvinToAll()" appDecimalLimit> K
+  <input type="text" min="0" [(ngModel)]="kelvin" (ngModelChange)="kelvinToAll()" appDecimalLimit> K
 </label>
 
 <label for="fahrenheit">
-  <input type="text" [(ngModel)]="fahrenheit" (ngModelChange)="fahrenheitToAll()" appDecimalLimit> F
+  <input type="text" min="-459.67" [(ngModel)]="fahrenheit" (ngModelChange)="fahrenheitToAll()" appDecimalLimit> F
 </label>
