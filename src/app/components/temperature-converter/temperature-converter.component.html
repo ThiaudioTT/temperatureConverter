@@ -3,12 +3,12 @@
 <!-- <input type="text" [(ngModel)]="celsius" (ngModelChange)="convertCelsiusToKelvin()" /> -->
 
 <label for="celsius">
-  <input type="number" [(ngModel)]="celsius" (ngModelChange)="celsiusToAll()" appDecimalLimit> C
+  <input type="text" min="-273.15" [(ngModel)]="celsius" (ngModelChange)="celsiusToAll()" appDecimalLimit> C
 </label>
 <label for="kelvin">
-  <input type="number" [(ngModel)]="kelvin" (ngModelChange)="kelvinToAll()" appDecimalLimit> K
+  <input type="text" [(ngModel)]="kelvin" (ngModelChange)="kelvinToAll()" appDecimalLimit> K
 </label>
 
 <label for="fahrenheit">
-  <input type="number" [(ngModel)]="fahrenheit" (ngModelChange)="fahrenheitToAll()" appDecimalLimit> F
+  <input type="text" [(ngModel)]="fahrenheit" (ngModelChange)="fahrenheitToAll()" appDecimalLimit> F
 </label>
