@@ -1,1 +1,14 @@
 <p>temperature-converter works!</p>
+
+<!-- <input type="text" [(ngModel)]="celsius" (ngModelChange)="convertCelsiusToKelvin()" /> -->
+
+<label for="celsius">
+  <input type="number" [(ngModel)]="celsius" (ngModelChange)="celsiusToAll()" appDecimalLimit> C
+</label>
+<label for="kelvin">
+  <input type="number" [(ngModel)]="kelvin" (ngModelChange)="kelvinToAll()" appDecimalLimit> K
+</label>
+
+<label for="fahrenheit">
+  <input type="number" [(ngModel)]="fahrenheit" (ngModelChange)="fahrenheitToAll()" appDecimalLimit> F
+</label>
