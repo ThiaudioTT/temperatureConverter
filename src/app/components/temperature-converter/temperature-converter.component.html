@@ -1,13 +1,13 @@
 <!-- <input type="text" [(ngModel)]="celsius" (ngModelChange)="convertCelsiusToKelvin()" /> -->
 
-<label for="celsius">
-  <input type="text" min="-273.15" [(ngModel)]="celsius" (ngModelChange)="celsiusToAll()" appDecimalLimit> C
+<label for="celsius" class="inputTemp">
+  <input type="text" min="-273.15" [(ngModel)]="celsius" (ngModelChange)="celsiusToAll()" appDecimalLimit> °C
 </label>
-<span> = </span>
-<label for="kelvin">
+<span class="equalSign"> = </span>
+<label for="kelvin" class="inputTemp">
   <input type="text" min="0" [(ngModel)]="kelvin" (ngModelChange)="kelvinToAll()" appDecimalLimit> K
 </label>
-<span> = </span>
-<label for="fahrenheit">
-  <input type="text" min="-459.67" [(ngModel)]="fahrenheit" (ngModelChange)="fahrenheitToAll()" appDecimalLimit> F
+<span class="equalSign"> = </span>
+<label for="fahrenheit" class="inputTemp">
+  <input type="text" min="-459.67" [(ngModel)]="fahrenheit" (ngModelChange)="fahrenheitToAll()" appDecimalLimit> °F
 </label>
