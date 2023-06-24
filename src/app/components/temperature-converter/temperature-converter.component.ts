@@ -49,5 +49,6 @@ export class TemperatureConverterComponent {
     this.kelvin = Number(this.kelvin.toFixed(2));
 
     if(this.celsius < -273.15) this.showAlert = true; // we take advantage of fixDecimals to check if the temperature is impossible
+    else this.showAlert = false;
   }
 }
