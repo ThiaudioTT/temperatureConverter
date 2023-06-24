@@ -11,6 +11,9 @@ export class TemperatureConverterComponent {
   fahrenheit: number;
   kelvin: number;
 
+  // var to show when the temperature is impossible
+  showAlert = false;
+
   constructor() {
     this.celsius = 0;
     this.fahrenheit = 0;
@@ -44,5 +47,7 @@ export class TemperatureConverterComponent {
     this.celsius = Number(this.celsius.toFixed(2));
     this.fahrenheit = Number(this.fahrenheit.toFixed(2));
     this.kelvin = Number(this.kelvin.toFixed(2));
+
+    if(this.celsius < -273.15) this.showAlert = true; // we take advantage of fixDecimals to check if the temperature is impossible
   }
 }
