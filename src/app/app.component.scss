@@ -1,3 +1,20 @@
+h1 {
+  margin-top: 3.5rem;
+}
+
+app-temperature-converter {
+  position: fixed;
+  top: 22vh;
+  left: 100px;
+  right: 100px;
+  bottom: auto;
+
+  @media (max-width: 768px) {
+    position: initial;
+  }
+
+}
+
 footer {
   position: fixed;
   bottom: 0;
