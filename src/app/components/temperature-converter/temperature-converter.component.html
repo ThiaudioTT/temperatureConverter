@@ -1,22 +1,48 @@
 <!-- <input type="text" [(ngModel)]="celsius" (ngModelChange)="convertCelsiusToKelvin()" /> -->
 
 <label for="celsius" class="inputTemp">
-  <input type="text" style="text-align: center;" min="-273.15" [(ngModel)]="celsius" (ngModelChange)="celsiusToAll()" appDecimalLimit> °C
+    <input
+        type="text"
+        style="text-align: center"
+        min="-273.15"
+        [(ngModel)]="celsius"
+        (ngModelChange)="celsiusToAll()"
+        appDecimalLimit
+    />
+    °C
 </label>
 <span class="equalSign"> = </span>
 <label for="kelvin" class="inputTemp">
-  <input type="text" style="text-align: center;" min="0" [(ngModel)]="kelvin" (ngModelChange)="kelvinToAll()" appDecimalLimit> K
+    <input
+        type="text"
+        style="text-align: center"
+        min="0"
+        [(ngModel)]="kelvin"
+        (ngModelChange)="kelvinToAll()"
+        appDecimalLimit
+    />
+    K
 </label>
 <span class="equalSign"> = </span>
 <label for="fahrenheit" class="inputTemp">
-  <input type="text" style="text-align: center;" min="-459.67" [(ngModel)]="fahrenheit" (ngModelChange)="fahrenheitToAll()" appDecimalLimit> °F
+    <input
+        type="text"
+        style="text-align: center"
+        min="-459.67"
+        [(ngModel)]="fahrenheit"
+        (ngModelChange)="fahrenheitToAll()"
+        appDecimalLimit
+    />
+    °F
 </label>
 
 <!-- Alert for physcally impossible values -->
 <div *ngIf="showAlert" class="alert">
-  <i class='fas fa-exclamation-triangle' style='font-size:24px'></i>
-  <p>
-    This is an impossible value for a temperature, see more about
-    <a href="https://en.wikipedia.org/wiki/Absolute_zero" target="_blank">here</a>.
-  </p>
+    <i class="fas fa-exclamation-triangle" style="font-size: 24px"></i>
+    <p>
+        This is an impossible value for a temperature, see more about
+        <a href="https://en.wikipedia.org/wiki/Absolute_zero" target="_blank"
+            >here</a
+        >.
+    </p>
 </div>
