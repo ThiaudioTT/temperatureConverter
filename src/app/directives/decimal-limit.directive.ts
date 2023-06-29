@@ -1,10 +1,10 @@
-import { Directive, ElementRef, HostListener } from '@angular/core'
+import { Directive, HostListener } from '@angular/core'
 
 @Directive({
     selector: '[appDecimalLimit]',
 })
 export class DecimalLimitDirective {
-    constructor(private el: ElementRef) {}
+    constructor() {}
 
     @HostListener('input', ['$event']) onInput(event: any) {
         const inputElement = event.target
